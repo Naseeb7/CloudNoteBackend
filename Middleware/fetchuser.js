@@ -1,4 +1,5 @@
 var jwt = require('jsonwebtoken');
+require('dotenv').config()
 JWT_KEY=process.env.JWT_KEY
 
 const fetchuser=(req,res,next)=>{
