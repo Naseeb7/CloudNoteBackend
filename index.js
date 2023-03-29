@@ -4,7 +4,7 @@ const cors=require("cors")
 
 connectToMongo();
 const app = express()
-const port = 5000
+const PORT = process.env.PORT || 5000
 
 app.use(cors())
 app.use(express.json())
@@ -13,6 +13,6 @@ app.use(express.json())
 app.use("/api/auth",require("./Routes/auth"))
 app.use("/api/notes",require("./Routes/notes"))
 
-app.listen(port, () => {
-  console.log(`cloudnote backend listening on port ${port}`)
+app.listen(PORT, () => {
+  console.log(`cloudnote backend listening on port ${PORT}`)
 }) 
